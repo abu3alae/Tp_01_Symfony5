@@ -6,3 +6,5 @@ TP Symfony
 $ symfony new --full --version="5.4" ./Tp_01_Symfony5
 
 - Add and Config env dev (Docker & Docker-Compose)
+- Add test unit
+- add test functional 
