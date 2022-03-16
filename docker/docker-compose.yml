@@ -1,0 +1,31 @@
+version: "3.8"
+services:
+
+    db_tp01_sym5:
+        image: mysql
+        container_name: db_docker_tp01_sym5
+        restart: always
+        volumes:
+            - db-data:/var/lib/mysql
+        environment:
+            MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+        networks:
+            - dev
+
+    www_tp01_sym5:
+        build: php
+        container_name: www_docker_tp01_sym5
+        ports:
+          - "8080:80"
+        volumes:
+            - ./php/vhosts:/etc/apache2/sites-enabled
+            - ../:/var/www
+        restart: always
+        networks:
+            - dev
+
+networks:
+    dev:
+
+volumes:
+    db-data:
