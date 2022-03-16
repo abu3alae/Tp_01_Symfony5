@@ -2,5 +2,5 @@
 
 TP Symfony
 
-Install symfony
+- Install symfony:
 $ symfony new --full --version="5.4" ./Tp_01_Symfony5
